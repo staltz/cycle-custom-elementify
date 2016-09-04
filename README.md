@@ -27,9 +27,11 @@ npm install cycle-custom-elementify
 
 #### Required!
 
-Your target browser must support [Custom Elements v0](http://webcomponents.org/polyfills/custom-elements/). To install the polyfill:
+Your target browser must support [Custom Elements v0](http://webcomponents.org/polyfills/custom-elements/) or install the polyfill for other browsers:
 
 - `npm install webcomponents.js`
+- Cycle DOM v12.2.4
+- [This Snabbdom Pull Request](https://github.com/paldepind/snabbdom/pull/159) needs to be applied before you can use this library
 - Include `<script src="./node_modules/webcomponents.js/webcomponents.js"></script>` in your page
 
 This library is experimental and so far **only** supports Cycle.js apps written with xstream. You can only `customElementify` a function that expects xstream sources and sinks.
