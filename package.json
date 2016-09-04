@@ -1,0 +1,38 @@
+{
+  "name": "cycle-custom-elementify",
+  "version": "1.0.0",
+  "author": "Andre Staltz",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "browserify-shim": {
+    "xstream": "global:xstream"
+  },
+  "dependencies": {
+    "@cycle/dom": "12.2.x",
+    "@cycle/xstream-run": "3.1.x",
+    "xstream": "6.2.x"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "babelify": "^7.2.0",
+    "browserify": "11.0.1",
+    "browserify-shim": "^3.8.12",
+    "mkdirp": "0.5.x",
+    "typescript": "1.8.7",
+    "uglify-js": "^2.7.3"
+  },
+  "scripts": {
+    "browserify": "browserify lib/index.js -t babelify -t browserify-shim --standalone customElementify --exclude xstream --outfile dist/cycle-custom-elementify.js",
+    "uglify": "uglifyjs dist/cycle-custom-elementify.js -o dist/cycle-custom-elementify.min.js",
+    "prelib": "rm -rf lib/ && mkdir -p lib",
+    "lib": "tsc",
+    "predist": "rm -rf dist/ && mkdir -p dist/",
+    "dist": "npm run browserify && npm run uglify",
+    "release-patch": "npm --no-git-tag-version version patch",
+    "release-minor": "npm --no-git-tag-version version minor",
+    "release-major": "npm --no-git-tag-version version major"
+  }
+}
