@@ -4,7 +4,7 @@ import {h, VNode, makeDOMDriver} from '@cycle/dom';
 import Item from './Item';
 import List from './List';
 import {DOMSource} from '@cycle/dom/xstream-typings';
-import customElementify from '../../src/index';
+import customElementify from 'cycle-custom-elementify';
 
 interface Sources {
   DOM: DOMSource;

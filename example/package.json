@@ -7,6 +7,7 @@
   "dependencies": {
     "@cycle/dom": "12.2.x",
     "@cycle/xstream-run": "3.1.x",
+    "cycle-custom-elementify": "^1.0.0",
     "webcomponents.js": "^0.7.22",
     "xstream": "6.2.x"
   },
