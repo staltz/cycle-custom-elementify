@@ -1,6 +1,6 @@
 {
   "name": "cycle-custom-elementify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Andre Staltz",
   "license": "MIT",
   "main": "lib/index.js",
