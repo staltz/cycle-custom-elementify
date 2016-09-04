@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "author": "Andre Staltz",
   "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
